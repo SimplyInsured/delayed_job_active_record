@@ -28,7 +28,7 @@ module Delayed
 
       # A job object that is persisted to the database.
       # Contains the work object as a YAML field.
-      class Job < ::ActiveRecord::Base
+      class Job < ::Ardm::Record
         include Delayed::Backend::Base
 
         if ::ActiveRecord::VERSION::MAJOR < 4 || defined?(::ActiveRecord::MassAssignmentSecurity)
